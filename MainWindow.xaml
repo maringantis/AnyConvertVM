@@ -1,12 +1,35 @@
-﻿<Window x:Class="AnyConvertVM.MainWindow"
+﻿<Window x:Name="AnyConvertVM_TitleBar" x:Class="AnyConvertVM.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AnyConvertVM"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="AnyConvertVM" Height="331.381" Width="481.799" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen">
+    <Grid Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="293*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel x:Name="FormatRBPanel" HorizontalAlignment="Center" Height="93" Margin="30,62,10,0" VerticalAlignment="Top" Width="323" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Grid.ColumnSpan="2">
+            <RadioButton x:Name="VDI_RB" Content="VDI (VirtualBox)" Margin="10,0,0,0" IsChecked="True"/>
+            <RadioButton x:Name="VHDX_RB" Content="VHDX (Hyper-V)" Margin="10,0,0,0"/>
+            <RadioButton x:Name="RAW_RB" Content="RAW" Margin="10,0,0,0"/>
+            <RadioButton x:Name="QCOW2_RB" Content="QCOW2 (KVM, Xen)" Margin="10,0,0,0"/>
+            <RadioButton x:Name="VMDK_rb" Content="VMDK (VMware)" Margin="10,0,0,0"/>
+            <RadioButton x:Name="VHD_RB" Content="VHD (Hyper-V)" Margin="10,0,0,0"/>
+
+
+
+
+
+
+        </StackPanel>
+        <Button x:Name="Convert_BTN" Content="Convert!" HorizontalAlignment="Left" Height="35" Margin="30,223,0,0" VerticalAlignment="Top" Width="99" Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" Click="Convert_BTN_Click"/>
+        <TextBox x:Name="selectFromDisk_TB" HorizontalAlignment="Left" Height="19" Margin="30,23,0,0" TextWrapping="Wrap" Text="Select the virtual hard disk to convert" VerticalAlignment="Top" Width="322" SelectionBrush="#FF95B7D3" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Grid.ColumnSpan="2"/>
+        <Button x:Name="selectFromDisk_BTN" Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="16,23,0,0" Height="19" Grid.Column="2" Click="selectFromDisk_BTN_Click"/>
+        <TextBox x:Name="saveToDisk_TB" HorizontalAlignment="Left" Height="19" Margin="30,175,0,0" TextWrapping="Wrap" Text="Select the location the convert file to be saved" VerticalAlignment="Top" Width="322" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Grid.ColumnSpan="2"/>
+        <Button x:Name="saveToDisk_BTN" Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="16,175,0,0" Height="19" RenderTransformOrigin="0.467,2.842" Grid.Column="2" Click="saveToDisk_BTN_Click"/>
     </Grid>
 </Window>
