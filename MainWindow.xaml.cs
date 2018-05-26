@@ -76,8 +76,8 @@ namespace AnyConvertVM
             try
             {
 
-                Enum FromFormat=null;
-                Enum ToFormat = null; 
+                var FromFormat = new ConvertClassActions.FormatType();
+                var ToFormat = new ConvertClassActions.FormatType(); 
 
 
                 String SelectedDiskFileNameWithExt = Path.GetFileName(selectFromDisk_TB.Text);
@@ -179,17 +179,17 @@ namespace AnyConvertVM
                 }
                 #endregion
 
-                String SaveFileName = null;
-                SaveFileName = SelectedDiskFileName + toExt;
-                Console.WriteLine("Saved File Name will be: " + SaveFileName);
+                //String SaveFileName = null;
+                //SaveFileName = SelectedDiskFileName 
+              //  Console.WriteLine("Saved File Name will be: " + SaveFileName);
 
                 if ( (!ToFormat.Equals(null)) ||
-                     (!FromFormat.Equals(null)) ||
-                     (!SaveFileName.Equals(null))
+                     (!FromFormat.Equals(null)) //||
+                     //(!SaveFileName.Equals(null))
                    )
                 {
                     Console.WriteLine("Let's Convert");
-                    //ConvertClassActions.ConvertQEMU(FromFormat ,ToFormat);
+                    ConvertClassActions.ConvertQEMU(FromFormat ,ToFormat, selectFromDisk_TB.Text, SelectedDiskFileName, saveToDisk_TB.Text);
                 }
                 
 

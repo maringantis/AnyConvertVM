@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 /Tools/qemu-img-win-x64-2_3_0.zip
+/Tools/qemu-img-win-x64-2_3_0/test.vdi
