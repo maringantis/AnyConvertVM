@@ -61,6 +61,15 @@ namespace AnyConvertVM.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to AnyConvertVM.
+        /// </summary>
+        internal static string AppTitle {
+            get {
+                return ResourceManager.GetString("AppTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please select the disk to convert..
         /// </summary>
         internal static string SelectFile_msg {

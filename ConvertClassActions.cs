@@ -3,31 +3,43 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using log4net;
 
 namespace AnyConvertVM
 {
     class ConvertClassActions
     {
 
-        //qemu-img convert -f raw -O qcow2 image.img image.qcow2
+        
+        private static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+        private const string TAG = "ConvertClassActions: ";
 
-        public enum FormatType { VDI,VHDX,RAW,QCOW2,VMDK,VHD };
+        public enum FormatType { VDI,VHDX,RAW,QCOW2,VMDK,VHD,QED };
 
         public static void ConvertQEMU(FormatType fromFormat, FormatType toFormat, String FromFolderWithFile, String FileName,String SaveFolderPath)
         {
 
             try
             {
+                //qemu-img convert -f raw -O qcow2 image.img image.qcow2
+                // String args = null;
                 Console.WriteLine("Will start to convert " + fromFormat + " to " + toFormat);
 
                 //string fromFormatTextLower = fromFormat.ToString().ToLower();
 
                 //Log.Info(TAG + "Trying to update MTU values :" + Settings.MTU);
-                String Arguments = "/c Tools\\qemu-img-win-x64-2_3_0\\qemu-img.exe convert -f " + fromFormat.ToString().ToLower() + " -O " + toFormat.ToString().ToLower() 
-                    +" "+ @FromFolderWithFile +  " " + @SaveFolderPath+@"\"+FileName+"."+ toFormat.ToString().ToLower();
+
+                string fromFromatArgs = fromFormat.ToString().ToLower();
+                string toFromatArgs = toFormat.ToString().ToLower();
+                if (fromFromatArgs.Equals("vhd")) { fromFromatArgs = "vpc"; }
+                if (toFromatArgs.Equals("vhd")) { toFromatArgs = "vpc"; }
+
+                String Arguments = "/c Tools\\qemu-img-win-x64-2_3_0\\qemu-img.exe convert -f " + fromFromatArgs + " -O " + toFromatArgs
+                    + " "+ @FromFolderWithFile +  " " + @SaveFolderPath+@"\"+FileName+"."+ toFormat.ToString().ToLower();
                 Console.WriteLine("ARGs: " + Arguments);
                 var proc = new Process
                 {

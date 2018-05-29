@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Forms;
 using log4net;
@@ -10,9 +11,19 @@ namespace AnyConvertVM
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+        private const string TAG = "MainWindow: ";
+
+
         public MainWindow()
         {
             InitializeComponent();
+            LoadComponent();
+        }
+
+        private void LoadComponent()
+        {
+            CP_Label.Content = "Copyright © 2018 by Sunny Maringanti. Powered by : <a href=\"http://shyzon.com/\">Shyzon.com</a>"; ;
         }
 
         private void selectFromDisk_BTN_Click(object sender, RoutedEventArgs e)
@@ -39,7 +50,8 @@ namespace AnyConvertVM
             }
             catch (Exception ex)
             {
-
+                Misc.Utils.ExceptionHandleMsg(TAG, "Failed to load the Disk image.", ex);
+                Misc.Utils.ErrorBox("Failed to load the Disk image.", ex);
             }
         }
 
@@ -66,7 +78,8 @@ namespace AnyConvertVM
             }
             catch (Exception ex)
             {
-
+                Misc.Utils.ExceptionHandleMsg(TAG, "Failed to save the converted Disk image.", ex);
+                Misc.Utils.ErrorBox("Failed to save the converted Disk image.", ex);
             }
 
         }
@@ -81,15 +94,15 @@ namespace AnyConvertVM
 
 
                 String SelectedDiskFileNameWithExt = Path.GetFileName(selectFromDisk_TB.Text);
-                Console.WriteLine("Selected File Name with ext:" + SelectedDiskFileNameWithExt);
+                Log.Debug(TAG+"Selected File Name with ext:" + SelectedDiskFileNameWithExt);
 
                 String SelectedDiskFileName = Path.GetFileNameWithoutExtension(selectFromDisk_TB.Text);
-                Console.WriteLine("Selected File Name:" + SelectedDiskFileName);
+                Log.Debug(TAG+"Selected File Name:" + SelectedDiskFileName);
 
                 String SelectedDiskFormatName= Path.GetExtension(selectFromDisk_TB.Text);
-                Console.WriteLine("Selected File Format:" + SelectedDiskFormatName);
+                Log.Debug(TAG+"Selected File Format:" + SelectedDiskFormatName);
 
-                String toExt = null;
+               
                
                 if ((selectFromDisk_TB.Text.Equals("Select the virtual hard disk to convert")) ||
                     (selectFromDisk_TB.Text.Equals(null)) ||
@@ -104,7 +117,9 @@ namespace AnyConvertVM
                 {
                     System.Windows.MessageBox.Show(Properties.Resources.SelectFolder_msg);
                 }
+
                 #region ToFormatCheck
+                String toExt = null;
                 if (VDI_RB.IsChecked.Equals(true))
                 {
                     ToFormat = ConvertClassActions.FormatType.VDI;
@@ -139,7 +154,8 @@ namespace AnyConvertVM
                     toExt = ".vhd";
                 }
                 #endregion
-                // Console.WriteLine("Selected File Format:"+ SelectedDiskFormatName);
+
+                Log.Debug(TAG+"Selected File Format:"+ SelectedDiskFormatName);
 
                 #region FromFormatCheck
                 if (SelectedDiskFormatName.Equals(".vdi"))
@@ -179,27 +195,21 @@ namespace AnyConvertVM
                 }
                 #endregion
 
-                //String SaveFileName = null;
-                //SaveFileName = SelectedDiskFileName 
-              //  Console.WriteLine("Saved File Name will be: " + SaveFileName);
-
-                if ( (!ToFormat.Equals(null)) ||
-                     (!FromFormat.Equals(null)) //||
-                     //(!SaveFileName.Equals(null))
-                   )
-                {
-                    Console.WriteLine("Let's Convert");
-                    ConvertClassActions.ConvertQEMU(FromFormat ,ToFormat, selectFromDisk_TB.Text, SelectedDiskFileName, saveToDisk_TB.Text);
-                }
                 
 
-               
+                if ( (!ToFormat.Equals(null)) || (!FromFormat.Equals(null)))
+                {
+                    Log.Debug(TAG+"Starting conversion...");
+                    ConvertClassActions.ConvertQEMU(FromFormat ,ToFormat, selectFromDisk_TB.Text, SelectedDiskFileName, saveToDisk_TB.Text);
+                }
 
             }
             catch (Exception ex)
                 {
-
-                }
+                Misc.Utils.ExceptionHandleMsg(TAG, "Failed to convert the disk image.", ex);
+                Misc.Utils.ErrorBox("Failed to convert the disk image.", ex);
             }
+
+        }
     }
 }

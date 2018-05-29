@@ -5,20 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AnyConvertVM"
         mc:Ignorable="d"
-        Title="AnyConvertVM" Height="331.381" Width="481.799" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen">
-    <Grid Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}">
+        Title="AnyConvertVM" Height="419.381" Width="481.799" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen" Icon="Assets/Symbol.png">
+    <Grid Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" Margin="0,0,0,-9">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="293*"/>
-            <ColumnDefinition Width="70*"/>
-            <ColumnDefinition Width="113*"/>
+            <ColumnDefinition Width="387*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="34"/>
         </Grid.ColumnDefinitions>
-        <StackPanel x:Name="FormatRBPanel" HorizontalAlignment="Center" Height="93" Margin="30,62,10,0" VerticalAlignment="Top" Width="323" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Grid.ColumnSpan="2">
+        <StackPanel x:Name="FormatRBPanel" HorizontalAlignment="Center" Height="104" Margin="29,122,37,0" VerticalAlignment="Top" Width="321" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}">
             <RadioButton x:Name="VDI_RB" Content="VDI (VirtualBox)" Margin="10,0,0,0" IsChecked="True"/>
             <RadioButton x:Name="VHDX_RB" Content="VHDX (Hyper-V)" Margin="10,0,0,0"/>
             <RadioButton x:Name="RAW_RB" Content="RAW" Margin="10,0,0,0"/>
             <RadioButton x:Name="QCOW2_RB" Content="QCOW2 (KVM, Xen)" Margin="10,0,0,0"/>
             <RadioButton x:Name="VMDK_rb" Content="VMDK (VMware)" Margin="10,0,0,0"/>
             <RadioButton x:Name="VHD_RB" Content="VHD (Hyper-V)" Margin="10,0,0,0"/>
+            <RadioButton x:Name="QED_RB" Content="QED (KVM)" Margin="10,0,0,0"/>
 
 
 
@@ -26,10 +28,23 @@
 
 
         </StackPanel>
-        <Button x:Name="Convert_BTN" Content="Convert!" HorizontalAlignment="Left" Height="35" Margin="30,223,0,0" VerticalAlignment="Top" Width="99" Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" Click="Convert_BTN_Click"/>
-        <TextBox x:Name="selectFromDisk_TB" HorizontalAlignment="Left" Height="19" Margin="30,23,0,0" TextWrapping="Wrap" Text="Select the virtual hard disk to convert" VerticalAlignment="Top" Width="322" SelectionBrush="#FF95B7D3" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Grid.ColumnSpan="2"/>
-        <Button x:Name="selectFromDisk_BTN" Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="16,23,0,0" Height="19" Grid.Column="2" Click="selectFromDisk_BTN_Click"/>
-        <TextBox x:Name="saveToDisk_TB" HorizontalAlignment="Left" Height="19" Margin="30,175,0,0" TextWrapping="Wrap" Text="Select the location the convert file to be saved" VerticalAlignment="Top" Width="322" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Grid.ColumnSpan="2"/>
-        <Button x:Name="saveToDisk_BTN" Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="16,175,0,0" Height="19" RenderTransformOrigin="0.467,2.842" Grid.Column="2" Click="saveToDisk_BTN_Click"/>
+        <Button x:Name="Convert_BTN" Content="Convert!" HorizontalAlignment="Left" Height="35" Margin="28,301,0,0" VerticalAlignment="Top" Width="99" Background="#FFC8C8C8" Click="Convert_BTN_Click"/>
+        <TextBox x:Name="selectFromDisk_TB" HorizontalAlignment="Left" Height="19" Margin="28,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" SelectionBrush="#FF95B7D3" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}"/>
+        <Button x:Name="selectFromDisk_BTN" Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,71,0,0" Height="19" Grid.Column="2" Click="selectFromDisk_BTN_Click" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="saveToDisk_TB" HorizontalAlignment="Left" Height="19" Margin="29,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}"/>
+        <Button x:Name="saveToDisk_BTN" Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,254,0,0" Height="19" RenderTransformOrigin="0.467,2.842" Grid.Column="2" Click="saveToDisk_BTN_Click" Grid.ColumnSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="50" Margin="10,0,0,0" VerticalAlignment="Top" Width="198" Source="Assets/Images/logo.png"/>
+        <Label Content="Step 3:  Select the location the convert file to be saved" HorizontalAlignment="Left" Margin="28,228,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.449,-0.192" Width="322"/>
+        <Label Content="Step 4:  Let's convert!" HorizontalAlignment="Left" Margin="29,275,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.449,-0.192" Width="322"/>
+        <Label Content="Step 2:  Select the conversion format" HorizontalAlignment="Left" Margin="28,93,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.449,-0.192" Width="322"/>
+        <Label Content="Step 1:  Select the virtual hard disk to convert" HorizontalAlignment="Left" Margin="28,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.449,-0.192" Width="322"/>
+        <Label x:Name="CP_Label" HorizontalAlignment="Center" Margin="59,338,25,10" VerticalAlignment="Center" Width="358" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" Grid.ColumnSpan="3"
+            CCopyright © 2018 by Sunny Maringanti. Powered by :
+            <a href=\"http://shyzon.com/\">Shyzon.com</a>
+            <Hyperlink NavigateUri="http://www.google.com" RequestNavigate="Hyperlink_RequestNavigate">
+            Click here
+            </Hyperlink>
+        </Label>
+        <!--Content="Copyright © 2018 by Sunny Maringanti. Powered by : Shyzon.com" HorizontalAlignment="Center" Margin="59,338,25,10" VerticalAlignment="Center" Width="358" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" Grid.ColumnSpan="3"/>-->
     </Grid>
 </Window>
