@@ -108,6 +108,8 @@ namespace AnyConvertVM
                 }
                 else {
 
+                    System.Windows.Forms.MessageBox.Show("Conversion will start now.Application may hang for few minutes before conversion is complete. Do not close/kill the app.",
+                        Properties.Resources.AppTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     var FromFormat = new ConvertClassActions.FormatType();
                     var ToFormat = new ConvertClassActions.FormatType();
 

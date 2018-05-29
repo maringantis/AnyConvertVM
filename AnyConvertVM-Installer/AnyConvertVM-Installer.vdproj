@@ -21,6 +21,30 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_4630EC536E8C46BAB9330571FC97860C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_59233F101FA04C49A7852FD648DFA3ED"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6070DEF2B0284AD184BDA58DDCBAF6C7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6C21817468554F86A3E7A128FDE7DB68"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6C7DA700AF7E7B08326AE2A60EE428E9"
         "OwnerKey" = "8:_32F34522E38D49AA8861F3586FB69B1B"
         "MsmSig" = "8:_UNDEFINED"
@@ -29,6 +53,30 @@
         {
         "MsmKey" = "8:_872C2F6E79488C7924D17B0DE5BA6348"
         "OwnerKey" = "8:_32F34522E38D49AA8861F3586FB69B1B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AB0D29FAD20D47F9B6F423E954E47B47"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B34AB54384CB4324B4660ACA5C876934"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B47067ABFC1443258E9E92597F38A97C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C41DC7C8F0A341ABA25610D126BC5D7A"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -112,6 +160,86 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4630EC536E8C46BAB9330571FC97860C"
+            {
+            "SourcePath" = "8:..\\Tools\\qemu-img-win-x64-2_3_0\\libintl-8.dll"
+            "TargetName" = "8:libintl-8.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_A58BC2EA1C874657931D24EBCBA0D47E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_59233F101FA04C49A7852FD648DFA3ED"
+            {
+            "SourcePath" = "8:..\\Tools\\qemu-img-win-x64-2_3_0\\libssp-0.dll"
+            "TargetName" = "8:libssp-0.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_A58BC2EA1C874657931D24EBCBA0D47E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6070DEF2B0284AD184BDA58DDCBAF6C7"
+            {
+            "SourcePath" = "8:..\\Tools\\qemu-img-win-x64-2_3_0\\libgcc_s_sjlj-1.dll"
+            "TargetName" = "8:libgcc_s_sjlj-1.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_A58BC2EA1C874657931D24EBCBA0D47E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6C21817468554F86A3E7A128FDE7DB68"
+            {
+            "SourcePath" = "8:..\\Tools\\qemu-img-win-x64-2_3_0\\libglib-2.0-0.dll"
+            "TargetName" = "8:libglib-2.0-0.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_A58BC2EA1C874657931D24EBCBA0D47E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6C7DA700AF7E7B08326AE2A60EE428E9"
             {
             "AssemblyRegister" = "3:1"
@@ -174,6 +302,86 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AB0D29FAD20D47F9B6F423E954E47B47"
+            {
+            "SourcePath" = "8:..\\Assets\\Symbol.ico"
+            "TargetName" = "8:Symbol.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_8FD356DBECFA4D758F5A8A6D74397B3A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:TRUE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B34AB54384CB4324B4660ACA5C876934"
+            {
+            "SourcePath" = "8:..\\Tools\\qemu-img-win-x64-2_3_0\\qemu-img.exe"
+            "TargetName" = "8:qemu-img.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_A58BC2EA1C874657931D24EBCBA0D47E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B47067ABFC1443258E9E92597F38A97C"
+            {
+            "SourcePath" = "8:..\\Tools\\qemu-img-win-x64-2_3_0\\libgthread-2.0-0.dll"
+            "TargetName" = "8:libgthread-2.0-0.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_A58BC2EA1C874657931D24EBCBA0D47E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C41DC7C8F0A341ABA25610D126BC5D7A"
+            {
+            "SourcePath" = "8:..\\Tools\\qemu-img-win-x64-2_3_0\\libiconv-2.dll"
+            "TargetName" = "8:libiconv-2.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_A58BC2EA1C874657931D24EBCBA0D47E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -195,12 +403,34 @@
             {
             "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
             "Name" = "8:#1925"
-            "AlwaysCreate" = "11:FALSE"
+            "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_BF3A9CB02BF34466A372FB0CEB4503A8"
+                    {
+                    "Name" = "8:Tools"
+                    "AlwaysCreate" = "11:TRUE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_3C99B555E68F420080CA1C79DDB5F7B1"
+                        "Folders"
+                        {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_A58BC2EA1C874657931D24EBCBA0D47E"
+                            {
+                            "Name" = "8:qemu-img-win-x64-2_3_0"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_4470B4DCF2B7437BA65383F064D72DD1"
+                                "Folders"
+                                {
+                                }
+                            }
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_A671C423E2DC48A299928A77F540166C"
@@ -229,26 +459,26 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:AnyConvertVM-Installer"
+        "ProductName" = "8:AnyConvertVM"
         "ProductCode" = "8:{A1F0B028-7D5C-4279-817D-776CB184420A}"
-        "PackageCode" = "8:{A6DC31B7-2832-4BF8-9B06-DF50AC1A92A0}"
+        "PackageCode" = "8:{08309A0B-67D1-49C6-991D-4BF0A0F93E9E}"
         "UpgradeCode" = "8:{227B5C7D-D06D-44BE-9696-B6C39AECDDC8}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
+        "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Srinivas-nCore"
+        "Manufacturer" = "8:Shyzon"
         "ARPHELPTELEPHONE" = "8:"
-        "ARPHELPLINK" = "8:"
+        "ARPHELPLINK" = "8:http://shyzon.com/"
         "Title" = "8:AnyConvertVM-Installer"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Srinivas-nCore"
+        "ARPCONTACT" = "8:Sunny Maringanti"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_AB0D29FAD20D47F9B6F423E954E47B47"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -351,6 +581,34 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_14A6E32CCC0543EDB93079A730989480"
+            {
+            "Name" = "8:AnyConvertVM"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_32F34522E38D49AA8861F3586FB69B1B"
+            "Folder" = "8:_6E87063B06E145B49A9F7754F7B035C8"
+            "WorkingFolder" = "8:_8FD356DBECFA4D758F5A8A6D74397B3A"
+            "Icon" = "8:_AB0D29FAD20D47F9B6F423E954E47B47"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8ACBA332A9324F25BEA620511F4A5674"
+            {
+            "Name" = "8:AnyConvertVM-V1.0"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_32F34522E38D49AA8861F3586FB69B1B"
+            "Folder" = "8:_A671C423E2DC48A299928A77F540166C"
+            "WorkingFolder" = "8:_8FD356DBECFA4D758F5A8A6D74397B3A"
+            "Icon" = "8:_AB0D29FAD20D47F9B6F423E954E47B47"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {
@@ -752,7 +1010,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_32F34522E38D49AA8861F3586FB69B1B"
             {
-            "SourcePath" = "8:..\\AnyConvertVM\\obj\\Release\\AnyConvertVM.exe"
+            "SourcePath" = "8:..\\obj\\Release\\AnyConvertVM.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_8FD356DBECFA4D758F5A8A6D74397B3A"
