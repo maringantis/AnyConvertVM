@@ -2,10 +2,10 @@
 
 A simple GUI based Virtual Hard Disk Converter. It is used for converting of various virtual disk formats. It’s compatible with Hyper-V, KVM, VMware, VirtualBox and Xen virtualization solutions.
 
-
 ### Help or Contact
 
-Having trouble with AnyConvertVM?  [contact](http://shyzon.com/) [email] (sunsanikates@outlook.com) and we’ll help you sort it out.
+Having trouble with AnyConvertVM?
+Contact us: [Shyzon.com](http://shyzon.com/) or Email us: sunsanikates@outlook.com and we’ll help you sort it out.
 
 ### Copyright
 
