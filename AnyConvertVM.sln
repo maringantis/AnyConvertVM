@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnyConvertVM", "AnyConvertVM.csproj", "{0516A2BA-A281-43D1-AC89-852AB289CCA3}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AnyConvertVM-Installer", "..\AnyConvertVM-Installer\AnyConvertVM-Installer.vdproj", "{0C905B41-571C-4A1B-B050-5CA424BFFF36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{0516A2BA-A281-43D1-AC89-852AB289CCA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0516A2BA-A281-43D1-AC89-852AB289CCA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0516A2BA-A281-43D1-AC89-852AB289CCA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C905B41-571C-4A1B-B050-5CA424BFFF36}.Debug|Any CPU.ActiveCfg = Debug
+		{0C905B41-571C-4A1B-B050-5CA424BFFF36}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

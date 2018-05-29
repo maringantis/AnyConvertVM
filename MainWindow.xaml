@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AnyConvertVM"
         mc:Ignorable="d"
-        Title="AnyConvertVM" Height="419.381" Width="481.799" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen" Icon="Assets/Symbol.png">
-    <Grid Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" Margin="0,0,0,-9">
+        Title="AnyConvertVM" Height="407.821" Width="481.799" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="Assets/Symbol.png">
+    <Grid Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" Margin="0,0,0,1">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="387*"/>
+            <ColumnDefinition Width="142*"/>
+            <ColumnDefinition Width="245*"/>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="55*"/>
             <ColumnDefinition Width="34"/>
         </Grid.ColumnDefinitions>
-        <StackPanel x:Name="FormatRBPanel" HorizontalAlignment="Center" Height="104" Margin="29,122,37,0" VerticalAlignment="Top" Width="321" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}">
+        <StackPanel x:Name="FormatRBPanel" HorizontalAlignment="Center" Height="104" Margin="29,122,37,0" VerticalAlignment="Top" Width="321" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Grid.ColumnSpan="2">
             <RadioButton x:Name="VDI_RB" Content="VDI (VirtualBox)" Margin="10,0,0,0" IsChecked="True"/>
             <RadioButton x:Name="VHDX_RB" Content="VHDX (Hyper-V)" Margin="10,0,0,0"/>
             <RadioButton x:Name="RAW_RB" Content="RAW" Margin="10,0,0,0"/>
@@ -28,23 +29,37 @@
 
 
         </StackPanel>
-        <Button x:Name="Convert_BTN" Content="Convert!" HorizontalAlignment="Left" Height="35" Margin="28,301,0,0" VerticalAlignment="Top" Width="99" Background="#FFC8C8C8" Click="Convert_BTN_Click"/>
-        <TextBox x:Name="selectFromDisk_TB" HorizontalAlignment="Left" Height="19" Margin="28,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" SelectionBrush="#FF95B7D3" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}"/>
-        <Button x:Name="selectFromDisk_BTN" Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,71,0,0" Height="19" Grid.Column="2" Click="selectFromDisk_BTN_Click" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="saveToDisk_TB" HorizontalAlignment="Left" Height="19" Margin="29,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}"/>
-        <Button x:Name="saveToDisk_BTN" Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,254,0,0" Height="19" RenderTransformOrigin="0.467,2.842" Grid.Column="2" Click="saveToDisk_BTN_Click" Grid.ColumnSpan="2"/>
-        <Image HorizontalAlignment="Left" Height="50" Margin="10,0,0,0" VerticalAlignment="Top" Width="198" Source="Assets/Images/logo.png"/>
-        <Label Content="Step 3:  Select the location the convert file to be saved" HorizontalAlignment="Left" Margin="28,228,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.449,-0.192" Width="322"/>
-        <Label Content="Step 4:  Let's convert!" HorizontalAlignment="Left" Margin="29,275,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.449,-0.192" Width="322"/>
-        <Label Content="Step 2:  Select the conversion format" HorizontalAlignment="Left" Margin="28,93,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.449,-0.192" Width="322"/>
-        <Label Content="Step 1:  Select the virtual hard disk to convert" HorizontalAlignment="Left" Margin="28,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.449,-0.192" Width="322"/>
-        <Label x:Name="CP_Label" HorizontalAlignment="Center" Margin="59,338,25,10" VerticalAlignment="Center" Width="358" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" Grid.ColumnSpan="3"
-            CCopyright © 2018 by Sunny Maringanti. Powered by :
-            <a href=\"http://shyzon.com/\">Shyzon.com</a>
-            <Hyperlink NavigateUri="http://www.google.com" RequestNavigate="Hyperlink_RequestNavigate">
-            Click here
-            </Hyperlink>
-        </Label>
-        <!--Content="Copyright © 2018 by Sunny Maringanti. Powered by : Shyzon.com" HorizontalAlignment="Center" Margin="59,338,25,10" VerticalAlignment="Center" Width="358" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" Grid.ColumnSpan="3"/>-->
+        <Button x:Name="Convert_BTN" Content="Convert!" HorizontalAlignment="Left" Height="34" Margin="0,306,0,0" VerticalAlignment="Top" Width="75" Background="#FFC8C8C8" Click="Convert_BTN_Click" Grid.ColumnSpan="2" Grid.Column="3"/>
+        <TextBox x:Name="selectFromDisk_TB" HorizontalAlignment="Left" Height="19" Margin="28,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" SelectionBrush="#FF95B7D3" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Grid.ColumnSpan="2"/>
+        <Button x:Name="selectFromDisk_BTN" Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,71,0,0" Height="19" Grid.Column="2" Click="selectFromDisk_BTN_Click" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="saveToDisk_TB" HorizontalAlignment="Left" Height="19" Margin="29,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Grid.ColumnSpan="2" TextChanged="saveToDisk_TB_TextChanged"/>
+        <Button x:Name="saveToDisk_BTN" Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,254,0,0" Height="19" RenderTransformOrigin="0.467,2.842" Grid.Column="2" Click="saveToDisk_BTN_Click" Grid.ColumnSpan="3"/>
+        <Image HorizontalAlignment="Left" Height="50" Margin="10,0,0,0" VerticalAlignment="Top" Width="198" Source="Assets/Images/logo.png" Grid.ColumnSpan="2"/>
+        <Label Content="Step 3:  Select the location the convert file to be saved" HorizontalAlignment="Left" Margin="28,228,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.449,-0.192" Width="322" Grid.ColumnSpan="2"/>
+        <Label Content="Step 4:  Let's convert!" HorizontalAlignment="Left" Margin="29,275,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.449,-0.192" Width="322" Grid.ColumnSpan="2"/>
+        <Label Content="Step 2:  Select the conversion format" HorizontalAlignment="Left" Margin="28,93,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.449,-0.192" Width="322" Grid.ColumnSpan="2"/>
+        <Label Content="Step 1:  Select the virtual hard disk to convert" HorizontalAlignment="Left" Margin="28,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.449,-0.192" Width="322" Grid.ColumnSpan="2"/>
+        
+        <ProgressBar x:Name="ProgressBar_PB" HorizontalAlignment="Left" Height="34" Margin="29,306,0,0" VerticalAlignment="Top" Width="322" Grid.ColumnSpan="2" Value="1"/>
+        <Canvas Grid.ColumnSpan="4" Margin="46,340,10,28">
+            <Label x:Name="CP_Label" Content ="Copyright © 2018 by" HorizontalAlignment="Center" VerticalAlignment="Center" Width="122" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" Height="26">
+                <!--<Hyperlink NavigateUri="http://shyzon.com/\" RequestNavigate="Hyperlink_RequestNavigate">
+                Copyright © 2018 by Sunny Maringanti. Powered by :Shyzon.com
+            </Hyperlink>-->
+
+            </Label>
+            <Label x:Name="CP_Label1" VerticalAlignment="Center" HorizontalAlignment="Left" Width="111" Height="26" Canvas.Left="119">
+                <Hyperlink NavigateUri="https://www.linkedin.com/in/srinivasamaringanti/\" RequestNavigate="Hyperlink_RequestNavigate1">
+                    <Run Text="Sunny Maringanti."/>
+                </Hyperlink>
+            </Label>
+            <Label x:Name="CP_Label2" Content ="Powered by: " HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" Canvas.Left="221"/>
+            <Label x:Name="CP_Label3" Height="28" Canvas.Left="292" Width="78" RenderTransformOrigin="0.48,0.156">
+                <Hyperlink NavigateUri="http://shyzon.com/\" RequestNavigate="Hyperlink_RequestNavigate2">
+                    <Run Text="Shyzon.com"/>
+                </Hyperlink>
+            </Label>
+
+        </Canvas>
     </Grid>
 </Window>
