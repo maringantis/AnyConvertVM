@@ -5,8 +5,8 @@ A simple GUI based Virtual Hard Disk Converter. It is used for converting of var
 ### Help or Contact
 
 Having trouble with AnyConvertVM?
-Contact us: [Shyzon.com](http://shyzon.com/) or Email us: sunsanikates@outlook.com and we’ll help you sort it out.
+Email: sunsanikates@outlook.com and we’ll help you sort it out.
 
 ### Copyright
 
-Copyright © 2018 by [Sunny Maringanti](https://www.linkedin.com/in/srinivasamaringanti/).Powered by: [Shyzon.com](http://shyzon.com/)
+Copyright © 2018 by [Sunny Maringanti](https://www.linkedin.com/in/srinivasamaringanti/).
